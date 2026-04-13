@@ -31,7 +31,6 @@ const LandingPage = () => {
             <MovieCard key={index} movie={movie}/> 
           ))}
         </div>
-        
       </section>
     </div>
   )
