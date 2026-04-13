@@ -13,6 +13,7 @@
 
     .movieCard__poster:hover{
         transform: scale(1.05);
+        cursor: pointer;
     }
 
     .movieCard__title{
@@ -21,6 +22,7 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 1.2rem;
         margin-top: 10px;
+        min-height: 30px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
