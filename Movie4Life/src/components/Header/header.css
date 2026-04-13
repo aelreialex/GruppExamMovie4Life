@@ -5,6 +5,9 @@
     padding: 1rem 5rem;
     background-color: var(--background);
     border-bottom: 1px solid var(--text-muted);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 
     .logo-container {
         display: flex;
