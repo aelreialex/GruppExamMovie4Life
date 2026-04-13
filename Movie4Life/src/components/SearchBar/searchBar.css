@@ -1,0 +1,41 @@
+.searchBar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .magnifyArea {
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .magnifyIcon {
+            fill: var(--text-muted);
+            width: 1.5rem; 
+            height: 1.5rem;
+        }
+    }
+    
+    
+    .searchBar {
+        border-radius: 10px;
+        background-color: var(--card-background);
+        border: 1px solid var(--text-muted);
+        width: 40vw;
+        height: 55px;
+        color: var(--text-primary);
+        font-family: var(--font-body);
+        padding-left: 3.5rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    .searchBar:focus {
+        border: none;
+        outline: 1px solid var(--primary-accent);
+    }
+}
