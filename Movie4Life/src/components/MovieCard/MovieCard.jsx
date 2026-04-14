@@ -6,7 +6,7 @@ const MovieCard = ({movie}) => {
   console.log(movie.imdbID)
 
   function handleSinglePage(){
-  navigate(`movie/${movie.imdbID}`, {replace: true})
+  navigate(`/movie/${movie.imdbID}`, {replace: true})
 }
 
   return (
