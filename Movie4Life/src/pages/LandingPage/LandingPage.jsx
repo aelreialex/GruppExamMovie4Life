@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useFetchMovies } from "../../hooks/useFetchMovies";
-import { shuffleArray } from "../../hooks/shuffleArray";
+import { shuffleArray } from "../../utils/shuffleArray";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import "./landingPage.css"
 
