@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+.watchPage__movieList{
+    display:flex;
+    flex-direction: column;
+    background-color: #0F0F0F;
+    margin: 2rem;
+    max-width: 1440px;
+    height: 100%;
+    
+    .watchPage__yourList{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+    }
+
+    .watchPage__yourList--empty{
+        margin-top: 7rem;
+    }
+
+    .watchPage__movies{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.5rem;
+    }
+}
