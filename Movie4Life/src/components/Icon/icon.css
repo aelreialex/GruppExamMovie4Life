@@ -1,0 +1,19 @@
+.icon {
+    border-radius: 50px;
+    background-color: red;
+    position: absolute;
+    padding: 0.5rem;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+
+    .watchIcon {
+        fill: var(--text-primary);
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        left: 10%;
+    }
+}
