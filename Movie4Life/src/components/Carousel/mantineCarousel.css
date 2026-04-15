@@ -1,0 +1,137 @@
+/* mantineCarousel.css */
+
+.trailer-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.trailer-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Overlay med text (enligt din skiss) */
+.trailer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  align-items: center;
+  pointer-events: none; /* Gör så att man kan klicka igenom overlay till trailern */
+}
+
+.trailer-content {
+  max-width: 500px;
+  padding: 60px;
+  color: white;
+}
+
+.featured-badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.trailer-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.trailer-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+.watch-now-btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  pointer-events: auto; /* Gör knappen klickbar */
+  transition: all 0.3s ease;
+}
+
+/* .watch-now-btn:hover {
+  background: #f6121d;
+  transform: scale(1.02);
+} */
+
+/* mantineCarousel.css - Runda prickar */
+
+/* Behållare för prickarna */
+.mantine-Carousel-indicators {
+  gap: 12px !important;
+  bottom: 20px !important;
+}
+
+/* Vanliga prickar (runda) */
+.mantine-Carousel-indicator {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important; /* ← Alla börjar som RUNA */
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* EXTRA SYNLIGA KNAPPAR */
+.mantine-Carousel-control {
+  background-color: #2a2a2a77 !important; /* Röd bakgrund - syns JÄTTEBRA! */
+  color: white !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important; /* Runda knappar */
+  opacity: 1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* AKTIV prick (den film du står på) = AVLÅNG / LÄNGRE */
+.mantine-Carousel-indicator[data-active] {
+  width: 30px !important; /* ← LÄNGRE (avlång) */
+  height: 10px !important; /* ← Samma höjd */
+  border-radius: 5px !important; /* ← Lätt rundade hörn, men avlång */
+  background-color: #ffffff !important; /* ← Röd färg */
+}
+
+.mantine-Carousel-control:hover {
+  background-color: #f6121d !important;
+  transform: scale(1.1) !important;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .trailer-content {
+    padding: 20px;
+  }
+
+  .trailer-title {
+    font-size: 28px;
+  }
+
+  .trailer-description {
+    font-size: 14px;
+  }
+}

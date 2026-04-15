@@ -27,6 +27,11 @@ const LandingPage = () => {
   if (isLoading) return <div>Laddar filmer...</div>;
   if (isError) return <div>Något gick fel.</div>;
 
+  // 2. För Carousellen: ta bara de första 5 filmerna (eller blanda och ta 5)
+  const carouselMovies = movies?.slice(0, 5); // ← BARA 5 FILMER till carousellen
+  // Eller om du vill slumpa fram 5 filmer:
+  // const carouselMovies = shuffleArray([...movies]).slice(0, 5);
+
   console.log(movieList);
 
   return (
@@ -34,7 +39,7 @@ const LandingPage = () => {
       <section className="landingPage__movieList">
         {/* MANTINE: Visa bilduppvisaren med alla film-bilder */}
         {/* images={movieImages} = skicka in listan med bild-addresser */}
-        <CustomCarousel images={movieImages} />
+        <CustomCarousel movies={carouselMovies} />
 
         <h2 className="landingPage__recommended">Recommended Movies</h2>
         <div className="landingPage__movies">
