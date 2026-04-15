@@ -18,3 +18,20 @@ export const useFetchMovies = () => {
 
   return { movies, isLoading, isError };
 };
+
+export const useFetchSearch = ({ string }) => {
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get(`http://www.omdbapi.com/?apikey=bb97d4a3&s=${string}`)
+      .then((response) => setMovies(response.data.Search))
+      .catch(() => setIsError(true))
+      .finally(() => setIsLoading(false));
+  }, [string]);
+
+  return { movies, isLoading, isError };
+};
