@@ -1,3 +1,4 @@
+// Hämta bilduppvisaren (carousellen) som vi skapade
 import CustomCarousel from "../../components/Carousel/MantineCarousel";
 import { useEffect, useState } from "react";
 import { useFetchMovies } from "../../hooks/useFetchMovies";
@@ -9,7 +10,11 @@ const LandingPage = () => {
   const [movieList, setMovieList] = useState([]);
   const { movies, isLoading, isError } = useFetchMovies();
 
-  // Mantine
+  // MANTINE: Skapa en lista med BARA bild-addresser från filmerna
+  // movies?.map = om movies finns, gå igenom varje film
+  // movie.Poster = hämta bara "Poster"-värdet (det är bild-addressen)
+  // || [] = om movies är tomt/null, använd en tom lista (så appen inte kraschar)
+  // OBS nu visas alla filmer i trailern. Koipera rad 9 - 30 om vi ska ha carousel för sig själv (få allt att funka först)
   const movieImages = movies?.map((movie) => movie.Poster) || [];
 
   useEffect(() => {
@@ -26,10 +31,11 @@ const LandingPage = () => {
 
   return (
     <div className="wrapper">
-      {/* Mantine */}
-      <CustomCarousel images={movieImages} />
-
       <section className="landingPage__movieList">
+        {/* MANTINE: Visa bilduppvisaren med alla film-bilder */}
+        {/* images={movieImages} = skicka in listan med bild-addresser */}
+        <CustomCarousel images={movieImages} />
+
         <h2 className="landingPage__recommended">Recommended Movies</h2>
         <div className="landingPage__movies">
           {movieList.map((movie, index) => (
