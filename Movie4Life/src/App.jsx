@@ -1,8 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
-// NOTERA: Mantine styles är FLYTTADE till main.jsx (där de ska vara!)
-// import "@mantine/core/styles.css";
-// import "@mantine/carousel/styles.css";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import SingleMoviePage from "./pages/SingleMoviePage/SingleMoviePage";

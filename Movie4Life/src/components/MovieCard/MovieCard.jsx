@@ -1,16 +1,31 @@
+import Icon from "../Icon/Icon";
 import "./movieCard.css";
 import { useNavigate } from "react-router-dom";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({
+  movie,
+  watchlist,
+  addToWatchlist,
+  removeFromWatchlist,
+  isOnWatchlist,
+}) => {
   const navigate = useNavigate();
-  console.log(movie.imdbID);
 
   function handleSinglePage() {
-    navigate(`movie/${movie.imdbID}`, { replace: true });
+    navigate(`/movie/${movie.imdbID}`, { replace: true });
   }
 
   return (
     <article className="movieCard" id={movie.imdbID}>
+      <Icon
+        path={null}
+        onClick={() =>
+          isOnWatchlist(movie.imdbID)
+            ? removeFromWatchlist(movie.imdbID)
+            : addToWatchlist(movie)
+        }
+        type="Watchlist"
+      />
       <img
         onClick={handleSinglePage}
         className="movieCard__poster"
@@ -20,5 +35,3 @@ const MovieCard = ({ movie }) => {
     </article>
   );
 };
-
-export default MovieCard;
