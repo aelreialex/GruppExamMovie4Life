@@ -4,7 +4,7 @@ import './watchListPage.css'
 
 const WatchListPage = () => {
   
-  const { watchlist, addToWatchlist, removeFromWatchlist } = useWatchlist();
+  const { watchlist, removeFromWatchlist } = useWatchlist();
 
   const isOnWatchlist = (id) => {
       if(watchlist.some(movie => movie.imdbID === id)) return true;
