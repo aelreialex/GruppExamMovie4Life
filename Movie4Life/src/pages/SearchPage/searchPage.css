@@ -28,3 +28,38 @@
         }
     }
 }
+
+.searchPage__movieList{
+
+    @media (max-width: 1200px){
+
+        .searchPage__movies{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
+    @media (max-width: 900px){
+        & .searchPage__movies{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        & .searchPage__movies{
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 600px){
+        & .searchPage__movies{
+            grid-template-columns: repeat(2, 1fr);
+         }
+    }
+
+    @media (max-width: 475px){
+
+        & .searchPage__movies{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+}

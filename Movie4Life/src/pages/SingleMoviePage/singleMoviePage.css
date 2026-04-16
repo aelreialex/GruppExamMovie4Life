@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
 .singleMovie{
     display:flex;
     justify-content: center;
@@ -26,13 +28,14 @@
 
     .singleMovie__information{ 
         display:flex;
+        font-family: "Montserrat", sans-serif !important;
         flex-direction: column;
         gap: 25px;
         align-items: flex-start;
 
         .singleMovie__title{
-            font-size: 3rem;
-            max-width: 700px;
+            font-size: 2.5rem;
+            max-width: 1000px;
         }
         
         .button-single{
@@ -67,6 +70,11 @@
         }
 
         .singleMovie__plot{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  /* Denna rad är obligatorisk för att det ska fungera */
+            overflow: hidden;
+            max-height: 500px;
             color: rgb(184, 177, 177);
             font-size: 1.2rem;
             max-width: 800px;
@@ -113,6 +121,7 @@
 
         .singleMovie__information{
             align-items: center;
+            text-align: center;
 
             .singleMovie__actors{
                 text-align: center;
@@ -136,6 +145,28 @@
 
 @media (max-width: 600px) {
     .singleMovie{
+
+        .singleMovie__information{
+            align-items: center;
+            text-align: center;
+            
+            .singleMovie__title{
+            font-size: 1.8rem;
+            max-width: 1000px;
+        }
+            .singleMovie__plotHeading{
+            font-size: 1.2rem;
+        }
+
+        .singleMovie__actors{
+            font-size: 1.2rem;
+
+            .singleMovie__actors-text{
+                color: rgb(196, 184, 184);
+                font-size: 1rem;
+            }
+        }
+        }
 
         .singleMovie__img-box{
             height: 30vh;
