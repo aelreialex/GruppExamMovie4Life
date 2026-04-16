@@ -33,3 +33,35 @@
     justify-content: center;
     background-color: #0F0F0F;
 }
+
+
+.landingPage__movieList{
+
+    @media (max-width: 1200px){
+
+        .landingPage__movies{
+            grid-template-columns: repeat(4, 1fr);
+        }
+}
+
+    @media (max-width: 900px){
+        & .landingPage__movies{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 600px){
+
+        & .landingPage__movies{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 475px){
+
+        & .landingPage__movies{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+}
