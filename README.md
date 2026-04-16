@@ -4,7 +4,7 @@ https://www.figma.com/make/ClSUuWEx49jQDUAUCb7Fbs/Design-Movie4Life-Website?t=lx
 
 ## Mappstruktur – Skillnader mellan vår kod och Figma
 
-#### Vår mappstruktur:
+### Vår mappstruktur:
 Vi har byggt upp vår app. med en tydlig och organiserad mappstruktur. Vi skapar separata mappar för olika delar av appen – Components/ för återanvändbara komponenter som Carousel och MovieCard, hooks/ för våra egna hooks som useFetchMovies, pages/ för olika sidor som LandingPage och SearchPage, och utils/ för hjälpfunktioner som shuffle Array. 
 
 Genom att göra denna struktur gör det lättare för oss att hitta kod och återanvända komponenter. Våra komponenter är mindre och fokuserade på en specifik uppgift, vilket gör dem lättare att underhålla och testa.
