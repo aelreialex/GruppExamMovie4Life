@@ -27,3 +27,39 @@
         gap: 1.5rem;
     }
 }
+
+
+.watchPage__movieList{
+
+    @media (max-width: 1200px){
+
+        .watchPage__movies{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
+    @media (max-width: 900px){
+        & .watchPage__movies{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        & .watchPage__yourList{
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 600px){
+        & .watchPage__movies{
+            grid-template-columns: repeat(2, 1fr);
+         }
+    }
+
+    @media (max-width: 475px){
+
+        & .watchPage__movies{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+}
