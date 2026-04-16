@@ -48,10 +48,11 @@
   display: inline-block;
 }
 
+/* Titel - justera marginaler */
 .trailer-title {
   font-size: 48px;
   font-weight: 700;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   line-height: 1.2;
 }
 
@@ -73,6 +74,48 @@
   cursor: pointer;
   pointer-events: auto; /* Gör knappen klickbar */
   transition: all 0.3s ease;
+}
+
+/* mantineCarousel.css */
+
+/* Play-knapp */
+.play-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* Förhindrar att knappen krymper */
+}
+
+/* Featured badge - justeras för att matcha play-knappen */
+.featured-badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+/* Wrapper för play-knapp + featured badge */
+.play-badge-wrapper {
+  display: flex;
+  align-items: center; /* Vertikal centrering */
+  gap: 16px; /* Avstånd mellan play-knapp och text */
+  margin-bottom: 20px;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  background-color: #f6121d;
 }
 
 /* .watch-now-btn:hover {

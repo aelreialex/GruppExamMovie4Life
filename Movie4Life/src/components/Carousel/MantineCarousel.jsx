@@ -1,4 +1,5 @@
 import { Carousel } from "@mantine/carousel";
+import { IconPlayerPlay } from "@tabler/icons-react"; // ← Play ikon
 import "@mantine/carousel/styles.css";
 import "./mantineCarousel.css";
 
@@ -19,23 +20,16 @@ function CustomCarousel({ movies = [] }) {
 
             <div className="trailer-overlay">
               <div className="trailer-content">
-                <span className="featured-badge">FEATURED TRAILER</span>
-                {/* Dela upp titeln på två rader om den är lång */}
-                <h2 className="trailer-title">
-                  {movie.Title.includes("Echoes") ? (
-                    <>
-                      Echoes in the
-                      <br />
-                      Dark
-                    </>
-                  ) : (
-                    movie.Title
-                  )}
-                </h2>
-                <p className="trailer-description">
-                  {movie.Plot ||
-                    "A paranormal investigator discovers that the haunted house she's researching holds the key to her own past."}
-                </p>
+                {/* PLAY-KNAPP OCH FEATURED BADGE I SAMMA RAD */}
+                <div className="play-badge-wrapper">
+                  <button className="play-button">
+                    <IconPlayerPlay size={24} fill="white" />
+                  </button>
+                  <span className="featured-badge">FEATURED TRAILER</span>
+                </div>
+
+                <h2 className="trailer-title">{movie.Title}</h2>
+
                 {/* <button className="watch-now-btn">WATCH NOW →</button> */}
               </div>
             </div>
