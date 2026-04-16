@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useFetchSearch } from "../../hooks/useFetchMovies"
+import { useFetchSearch } from "../../hooks/useFetchMovies";
 import { useParams } from "react-router-dom";
 import { useWatchlist } from "../../hooks/useWatchlist";
 import MovieCard from "../../components/MovieCard/MovieCard";
-import './searchPage.css';
+import "./searchPage.css";
 
 const SearchPage = () => {
   const urlString = useParams();
@@ -11,11 +11,11 @@ const SearchPage = () => {
   const [movieList, setList] = useState([]);
   const { movies, isLoading, isError } = useFetchSearch(string);
   const { watchlist, addToWatchlist, removeFromWatchlist } = useWatchlist();
-  
+
   const isOnWatchlist = (id) => {
-    if(watchlist.some(movie => movie.imdbID === id)) return true;
+    if (watchlist.some((movie) => movie.imdbID === id)) return true;
     else return false;
-  }
+  };
 
   useEffect(() => {
     setString(urlString);
@@ -23,7 +23,7 @@ const SearchPage = () => {
 
   useEffect(() => {
     setList(movies);
-    console.log('In setList Effect');
+    console.log("In setList Effect");
   }, [movies]);
 
   if (isLoading) return <div>Laddar filmer...</div>;
@@ -34,16 +34,23 @@ const SearchPage = () => {
       <section className="searchPage__movieList">
         <h2 className="searchPage__result">Result</h2>
         <div className="searchPage__movies">
-          {
-          movieList != null ?
+          {movieList != null ? (
             movieList.map((movie, index) => (
-            <MovieCard key={index} movie={movie} addToWatchlist={addToWatchlist} removeFromWatchlist={removeFromWatchlist} isOnWatchlist={isOnWatchlist}/> 
-            )) : <h2 className="noResult">No result.</h2>
-          }
+              <MovieCard
+                key={index}
+                movie={movie}
+                addToWatchlist={addToWatchlist}
+                removeFromWatchlist={removeFromWatchlist}
+                isOnWatchlist={isOnWatchlist}
+              />
+            ))
+          ) : (
+            <h2 className="noResult">No result.</h2>
+          )}
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default SearchPage
+export default SearchPage;
