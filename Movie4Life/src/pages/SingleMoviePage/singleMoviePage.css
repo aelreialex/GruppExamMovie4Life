@@ -1,0 +1,133 @@
+.singleMovie{
+    display:flex;
+    justify-content: center;
+    background-color: var(--secondary-background);
+    padding-top: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
+    min-height: 105vh;
+    gap: 50px;
+    color: white;
+
+
+    .singleMovie__img-box{
+        height: 70vh;
+        min-width: 400px;
+        max-width:500px;
+
+    .singleMovie__img{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        outline: 1px solid black;
+        }
+
+    }
+
+    .singleMovie__information{ 
+        display:flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+
+        .singleMovie__title{
+            font-size: 3rem;
+            max-width: 700px;
+        }
+        
+        .button-single{
+            background-color: rgb(199, 11, 11);
+            padding: 1.1rem 40px 1.1rem 40px;
+            justify-content: flex;
+        }
+
+        .singleMovie__releaseDate{
+            color: rgb(189, 184, 184);
+            font-size: 1.2rem;
+
+        }
+
+        .singleMovie__genre{
+            color: white;
+            background-color: rgb(48, 45, 45);
+            padding: 5px;
+            border: 1px solid rgb(29, 28, 28);
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .singleMovie__plot{
+            color: rgb(184, 177, 177);
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+
+        .singleMovie__actors{
+            font-size: 1.5rem;
+
+            .singleMovie__actors-text{
+                color: rgb(196, 184, 184);
+                font-size: 1.2rem;
+            }
+        }
+        .singleMovie__director{
+            font-size: 1.2rem;
+        }
+
+        .singleMovie__languages{
+            font-size: 1.2rem;
+            padding-bottom: 50px;
+        }
+    }
+        
+    
+}
+
+
+
+
+
+
+@media (max-width: 1550px) {
+    .singleMovie {
+        flex-direction: column;
+        align-items: center;
+
+        .singleMovie__img-box{
+            height: 60vh;
+            max-width: 500px;
+        }
+
+        .singleMovie__information{
+            align-items: center;
+
+            .singleMovie__actors{
+                text-align: center;
+            }
+        }
+
+        .singleMovie__plot{
+            max-width: 700px;
+            text-align: center;
+        }
+    }
+
+}
+
+@media (max-width: 900px) {
+    .singleMovie{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .singleMovie{
+
+        .singleMovie__img-box{
+            height: 30vh;
+            max-width: 300px;
+            min-width: 300px;
+        }
+    }
+}

@@ -12,6 +12,7 @@
     .logo-container {
         display: flex;
         font-family: var(--font-heading);
+        cursor: pointer;
 
         .logo1 {
         color: var(--primary-accent);
