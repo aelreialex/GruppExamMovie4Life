@@ -1,6 +1,7 @@
 .icon {
     border-radius: 50px;
-    background-color: red;
+    background-color: var(--secondary-background);
+    border: 2px solid var(--secondary-background);
     position: absolute;
     padding: 0.5rem;
     z-index: 20;
@@ -8,6 +9,8 @@
     justify-content: center;
     margin-top: 0.25rem;
     margin-left: 0.25rem;
+    transition: transform 0.1s ease, background-color 0.2s ease-in;
+    /* transition: background-color 0.2s ease-in; */
 
     .watchIcon {
         fill: var(--text-primary);
@@ -17,3 +20,15 @@
         left: 10%;
     }
 }
+
+.icon--faved {
+    background-color: var(--primary-accent);
+}
+
+.icon:active{
+    transform: scale(0.9);
+}
+
+/* .icon:hover{
+    transform: scale(0.9);
+} */

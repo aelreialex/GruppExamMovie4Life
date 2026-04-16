@@ -10,7 +10,7 @@
   flex-direction: column;
   background-color: #0f0f0f;
   margin: 2rem;
-  margin-top: 100px;
+  margin-top: 150px;
   max-width: 1440px;
 
   .landingPage__recommended {
@@ -28,8 +28,43 @@
   }
 }
 
+.trailer-content {
+  margin-top: 20rem;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
   background-color: #0f0f0f;
+}
+
+.landingPage__movieList {
+  @media (max-width: 1200px) {
+    .landingPage__movies {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    & .landingPage__movies {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & .landingPage__recommended {
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    & .landingPage__movies {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 475px) {
+    & .landingPage__movies {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }

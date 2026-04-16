@@ -39,3 +39,27 @@
         border: 1px solid red;
     }
 }
+
+@media (max-width: 900px){
+
+    .searchBar-container {
+    
+    .searchBar {
+        border-radius: 10px;
+        background-color: var(--card-background);
+        border: 1px solid var(--text-muted);
+        outline: 0px;
+        width: 90vw;
+        height: 55px;
+        color: var(--text-primary);
+        font-family: var(--font-body);
+        padding-left: 3.5rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    .searchBar:focus {
+        border: 1px solid red;
+    }
+}
+}

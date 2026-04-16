@@ -50,7 +50,6 @@ const LandingPage = () => {
             <MovieCard
               key={index}
               movie={movie}
-              watchlist={watchlist}
               addToWatchlist={addToWatchlist}
               removeFromWatchlist={removeFromWatchlist}
               isOnWatchlist={isOnWatchlist}

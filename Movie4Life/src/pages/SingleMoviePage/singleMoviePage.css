@@ -36,10 +36,20 @@
         }
         
         .button-single{
+            display:flex;
             background-color: rgb(199, 11, 11);
             padding: 1.1rem 40px 1.1rem 40px;
-            justify-content: flex;
+            text-align: center; 
+            transition: transform 0.1s ease, background-color 0.2s ease-in;
+
+                .button__test{
+                    display:flex;
+                    align-items: center;
+                    text-align: center;
+                    font-size: 1.6rem;
+            }
         }
+       
 
         .singleMovie__releaseDate{
             color: rgb(189, 184, 184);
@@ -83,6 +93,9 @@
     
 }
 
+.button-single:hover{
+            transform: scale(0.99);
+        }
 
 
 
