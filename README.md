@@ -33,4 +33,5 @@ Medans i koden från figma så finner vi inte CSS filerna, det ligger en tailwin
 
 Men figma har en bättre theme.css där den har all lagt in rot CSS och bas CSS, där dom sätter upp h taggar, labels etc.…  
 
-Sammanfattning: Skillnaden mellan vår kod och figma. Är mer uppdelat, så att den känns mer lättläst än figma kod. Då figma skickar mycket information direkt in i TX:s och använder sig mycket av div element med klassnamn, som blir dålig bem. Exempelvis blir detta att figma kod känns tyngre att läsa och återskapa Jesper läs det själv.   
+### Sammanfattning: 
+Skillnaden mellan vår kod och figma. Är mer uppdelat, så att den känns mer lättläst än figma kod. Då figma skickar mycket information direkt in i TX:s och använder sig mycket av div element med klassnamn, som blir dålig bem. Exempelvis blir detta att figma kod känns tyngre att läsa och återskapa Jesper läs det själv.   
