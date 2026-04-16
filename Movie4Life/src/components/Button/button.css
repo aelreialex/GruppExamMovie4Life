@@ -12,6 +12,11 @@
     font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: box-shadow 0.1s ease;
+    transition: background-color 0.1s linear;
+    
+
+    
 
     .homeIcon, .watchIcon {
         fill: var(--text-primary);
@@ -19,3 +24,8 @@
         height: 1.5rem;
     }
 }
+
+.button:hover{
+        background-color: red;
+        box-shadow: 0px 0px 15px rgb(255, 0, 0, 0.5);
+    }

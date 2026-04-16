@@ -16,9 +16,13 @@ const Header = () => {
         navigate('/watchlist', {replace: true});
     }
 
+    const handleHome = () => {
+        navigate('/', {replace: true});
+    }
+
     return (
         <header className="header">
-            <span className='logo-container'>
+            <span onClick={handleHome} className='logo-container'>
                 <h1 className='logo1'>Movie</h1>
                 <h1 className='logo2'>4Life</h1>
             </span>
