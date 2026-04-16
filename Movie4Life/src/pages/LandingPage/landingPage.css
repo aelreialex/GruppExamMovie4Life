@@ -10,7 +10,7 @@
     flex-direction: column;
     background-color: #0F0F0F;
     margin: 2rem;
-    margin-top: 100px;
+    margin-top: 150px;
     max-width: 1440px;
     
     .landingPage__recommended{
@@ -47,6 +47,12 @@
     @media (max-width: 900px){
         & .landingPage__movies{
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        & .landingPage__recommended{
+            text-align: center;
+            margin-top: 50px;
+
         }
     }
 

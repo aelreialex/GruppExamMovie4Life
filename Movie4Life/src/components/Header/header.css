@@ -28,3 +28,37 @@
         gap: 2rem;
     }
 }
+
+
+@media (max-width: 1200px){
+
+    .header {
+
+        .logo-container {
+            display: none;
+        }
+
+
+    }
+
+}
+
+
+@media (max-width: 900px){
+
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 1rem 1rem;
+
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 90vw;
+        }
+    }
+
+
+}
+
