@@ -35,7 +35,7 @@ const LandingPage = () => {
         <h2 className="landingPage__recommended">Recommended Movies</h2>
         <div className="landingPage__movies">
           {movieList.map((movie, index) => (
-            <MovieCard key={index} movie={movie} watchlist={watchlist} addToWatchlist={addToWatchlist} removeFromWatchlist={removeFromWatchlist} isOnWatchlist={isOnWatchlist}/> 
+            <MovieCard key={index} movie={movie} addToWatchlist={addToWatchlist} removeFromWatchlist={removeFromWatchlist} isOnWatchlist={isOnWatchlist}/> 
           ))}
         </div>
       </section>
