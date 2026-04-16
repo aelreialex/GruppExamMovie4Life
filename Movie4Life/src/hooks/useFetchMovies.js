@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 export const useFetchMovies = () => {
@@ -26,10 +25,10 @@ export const useFetchSearch = ({string}) => {
     useEffect(() => {
         setIsLoading(true);
         axios.get(`http://www.omdbapi.com/?apikey=bb97d4a3&s=${string}`)
-            .then(response => setMovies(response.data))
+            .then(response => setMovies(response.data.Search))
             .catch(() => setIsError(true))
             .finally(() => setIsLoading(false));
-    }, []);
+    }, [string]);
 
     return { movies, isLoading, isError };
 }

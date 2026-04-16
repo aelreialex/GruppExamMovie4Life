@@ -9,6 +9,21 @@
     gap: 50px;
     color: white;
 
+
+    .singleMovie__img-box{
+        height: 70vh;
+        min-width: 400px;
+        max-width:500px;
+
+    .singleMovie__img{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        outline: 1px solid black;
+        }
+
+    }
+
     .singleMovie__information{ 
         display:flex;
         flex-direction: column;
@@ -18,6 +33,12 @@
         .singleMovie__title{
             font-size: 3rem;
             max-width: 700px;
+        }
+        
+        .button-single{
+            background-color: rgb(199, 11, 11);
+            padding: 1.1rem 40px 1.1rem 40px;
+            justify-content: flex;
         }
 
         .singleMovie__releaseDate{
@@ -62,25 +83,10 @@
     
 }
 
-.singleMovie__img-box{
-    height: 70vh;
-    min-width: 500px;
 
-    
-}
 
-.singleMovie__img{
-    height: 100%;
-    width: 100%;
-    border-radius: 15px;
-    outline: 1px solid black;
-}
 
-.button-single{
-    background-color: rgb(199, 11, 11);
-    padding: 1.1rem 40px 1.1rem 40px;
-    justify-content: flex;
-}
+
 
 @media (max-width: 1550px) {
     .singleMovie {

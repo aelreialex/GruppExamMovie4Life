@@ -9,8 +9,10 @@ const SearchBar = () => {
 
     const search = (e) => {
         e.preventDefault();
-        navigate(`/search/${input}`, {replace: true});
-        setInput('');
+        if(input != null && input != '') {
+            navigate(`/search/${input}`, {replace: true});
+            setInput('');
+        }
     }
 
   return (
