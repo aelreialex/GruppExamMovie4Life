@@ -1,4 +1,4 @@
-/* mantineCarousel.css */
+/* mantineCarousel.css - ENKEL VERSION */
 
 .trailer-container {
   position: relative;
@@ -13,7 +13,6 @@
   border: none;
 }
 
-/* Overlay med text (enligt din skiss) */
 .trailer-overlay {
   position: absolute;
   top: 0;
@@ -22,33 +21,21 @@
   bottom: 0;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0.4) 50%,
     rgba(0, 0, 0, 0) 100%
   );
   display: flex;
   align-items: center;
-  pointer-events: none; /* Gör så att man kan klicka igenom overlay till trailern */
+  pointer-events: auto;
 }
 
 .trailer-content {
-  max-width: 500px;
-  padding: 60px;
+  max-width: 400px;
+  margin: 22rem 10rem 4rem 4rem;
   color: white;
 }
 
-.featured-badge {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 6px 14px;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  display: inline-block;
-}
-
-/* Titel - justera marginaler */
 .trailer-title {
   font-size: 48px;
   font-weight: 700;
@@ -60,25 +47,10 @@
   font-size: 16px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  max-width: 500px;
 }
 
-.watch-now-btn {
-  background: #e50914;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  pointer-events: auto; /* Gör knappen klickbar */
-  transition: all 0.3s ease;
-}
-
-/* mantineCarousel.css */
-
-/* Play-knapp */
 .play-button {
   width: 50px;
   height: 50px;
@@ -90,10 +62,14 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  flex-shrink: 0; /* Förhindrar att knappen krymper */
+  flex-shrink: 0;
 }
 
-/* Featured badge - justeras för att matcha play-knappen */
+.play-button:hover {
+  transform: scale(1.1);
+  background-color: #f6121d;
+}
+
 .featured-badge {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -105,58 +81,42 @@
   display: inline-block;
 }
 
-/* Wrapper för play-knapp + featured badge */
 .play-badge-wrapper {
   display: flex;
-  align-items: center; /* Vertikal centrering */
-  gap: 16px; /* Avstånd mellan play-knapp och text */
+  align-items: center;
+  gap: 16px;
   margin-bottom: 20px;
 }
 
-.play-button:hover {
-  transform: scale(1.1);
-  background-color: #f6121d;
-}
-
-/* .watch-now-btn:hover {
-  background: #f6121d;
-  transform: scale(1.02);
-} */
-
-/* mantineCarousel.css - Runda prickar */
-
-/* Behållare för prickarna */
+/* Prickar */
 .mantine-Carousel-indicators {
   gap: 12px !important;
   bottom: 20px !important;
 }
 
-/* Vanliga prickar (runda) */
 .mantine-Carousel-indicator {
   width: 10px !important;
   height: 10px !important;
-  border-radius: 50% !important; /* ← Alla börjar som RUNA */
+  border-radius: 50% !important;
   background-color: rgba(255, 255, 255, 0.5) !important;
   transition: all 0.3s ease !important;
 }
 
-/* EXTRA SYNLIGA KNAPPAR */
+.mantine-Carousel-indicator[data-active] {
+  width: 30px !important;
+  height: 10px !important;
+  border-radius: 5px !important;
+  background-color: #ffffff !important;
+}
+
 .mantine-Carousel-control {
-  background-color: #2a2a2a77 !important; /* Röd bakgrund - syns JÄTTEBRA! */
+  background-color: #2a2a2a77 !important;
   color: white !important;
   width: 50px !important;
   height: 50px !important;
-  border-radius: 50% !important; /* Runda knappar */
+  border-radius: 50% !important;
   opacity: 1 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-}
-
-/* AKTIV prick (den film du står på) = AVLÅNG / LÄNGRE */
-.mantine-Carousel-indicator[data-active] {
-  width: 30px !important; /* ← LÄNGRE (avlång) */
-  height: 10px !important; /* ← Samma höjd */
-  border-radius: 5px !important; /* ← Lätt rundade hörn, men avlång */
-  background-color: #ffffff !important; /* ← Röd färg */
 }
 
 .mantine-Carousel-control:hover {
@@ -164,10 +124,10 @@
   transform: scale(1.1) !important;
 }
 
-/* Responsiv design */
+/* EN ENDA MEDIA QUERY - för mobil */
 @media (max-width: 768px) {
   .trailer-content {
-    padding: 20px;
+    margin: 10rem 2rem 2rem 2rem;
   }
 
   .trailer-title {
@@ -176,5 +136,10 @@
 
   .trailer-description {
     font-size: 14px;
+  }
+
+  .play-button {
+    width: 40px;
+    height: 40px;
   }
 }

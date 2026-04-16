@@ -35,3 +35,5 @@ const MovieCard = ({
     </article>
   );
 };
+
+export default MovieCard;

@@ -11,13 +11,6 @@ const LandingPage = () => {
   const [movieList, setMovieList] = useState([]);
   const { movies, isLoading, isError } = useFetchMovies();
 
-  // MANTINE: Skapa en lista med BARA bild-addresser från filmerna
-  // movies?.map = om movies finns, gå igenom varje film
-  // movie.Poster = hämta bara "Poster"-värdet (det är bild-addressen)
-  // || [] = om movies är tomt/null, använd en tom lista (så appen inte kraschar)
-  // OBS nu visas alla filmer i trailern. Koipera rad 9 - 30 om vi ska ha carousel för sig själv (få allt att funka först)
-  const movieImages = movies?.map((movie) => movie.Poster) || [];
-
   useEffect(() => {
     if (movies && movies.length > 0) {
       const shuffled = shuffleArray(movies).slice(0, 20);
