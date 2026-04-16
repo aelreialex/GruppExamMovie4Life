@@ -2,7 +2,7 @@ import Icon from "../Icon/Icon";
 import "./movieCard.css"
 import { useNavigate } from "react-router-dom"
 
-const MovieCard = ({movie, watchlist, addToWatchlist, removeFromWatchlist, isOnWatchlist}) => {
+const MovieCard = ({movie, addToWatchlist, removeFromWatchlist, isOnWatchlist}) => {
   const navigate = useNavigate();
 
   function handleSinglePage(){
@@ -11,7 +11,11 @@ const MovieCard = ({movie, watchlist, addToWatchlist, removeFromWatchlist, isOnW
 
   return (
     <article className="movieCard" id={movie.imdbID}>
-      <Icon path={null} onClick={ () => isOnWatchlist(movie.imdbID) ? removeFromWatchlist(movie.imdbID) : addToWatchlist(movie)} type='Watchlist' />
+      {
+        isOnWatchlist(movie.imdbID)
+        ? <Icon path={null} onClick={ () => removeFromWatchlist(movie.imdbID)} type='Watchlist' faved='icon--faved' />
+        : <Icon path={null} onClick={ () => addToWatchlist(movie)} type='Watchlist' />
+      }
       <img onClick={handleSinglePage} className="movieCard__poster" src={movie.Poster}></img>
       <h3 className="movieCard__title">{movie.Title}</h3>
     </article>
