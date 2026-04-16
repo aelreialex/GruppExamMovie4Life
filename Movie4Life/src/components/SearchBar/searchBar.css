@@ -25,6 +25,7 @@
         border-radius: 10px;
         background-color: var(--card-background);
         border: 1px solid var(--text-muted);
+        outline: 0px;
         width: 40vw;
         height: 55px;
         color: var(--text-primary);
@@ -35,7 +36,6 @@
     }
 
     .searchBar:focus {
-        border: none;
-        outline: 1px solid var(--primary-accent);
+        border: 1px solid red;
     }
 }
