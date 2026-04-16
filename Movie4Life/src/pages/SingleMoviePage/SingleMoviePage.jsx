@@ -39,7 +39,7 @@ const SingleMoviePage = () => {
         <h1 className="singleMovie__title">{test.Title}</h1>
         <p className="singleMovie__releaseDate">
           {" "}
-          Year: {test.Year}, Long: {test.Runtime}, Imdbrating:{test.imdbRating}
+          Year: {test.Year}, Long: {test.Runtime}, Imdbrating: {test.imdbRating}
         </p>
         <p className="singleMovie__genre">{test.Genre}</p>
         <h2 className="singleMovie__plotHeading">Plot</h2>
